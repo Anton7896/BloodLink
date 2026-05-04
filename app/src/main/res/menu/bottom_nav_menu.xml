@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/requestListFragment"   android:icon="@drawable/ic_search"      android:title="Заявки"/>
+    <item android:id="@+id/createRequestFragment"  android:icon="@drawable/ic_add"          android:title="Публикувай"/>
+    <item android:id="@+id/mapFragment"            android:icon="@drawable/ic_map"          android:title="Карта"/>
+    <item android:id="@+id/leaderboardFragment"    android:icon="@drawable/ic_leaderboard"  android:title="Класация"/>
+    <item android:id="@+id/profileFragment"        android:icon="@drawable/ic_person"       android:title="Профил"/>
+</menu>

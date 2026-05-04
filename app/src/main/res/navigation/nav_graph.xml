@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/requestListFragment">
+
+    <fragment android:id="@+id/requestListFragment"
+        android:name="com.bloodlink.ui.requests.RequestListFragment"
+        android:label="Заявки">
+        <action android:id="@+id/action_requestList_to_requestDetail"
+            app:destination="@id/requestDetailFragment"
+            app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment android:id="@+id/requestDetailFragment"
+        android:name="com.bloodlink.ui.requests.RequestDetailFragment"
+        android:label="Детайли"/>
+
+    <fragment android:id="@+id/createRequestFragment"
+        android:name="com.bloodlink.ui.requests.CreateRequestFragment"
+        android:label="Публикувай"/>
+
+    <fragment android:id="@+id/mapFragment"
+        android:name="com.bloodlink.ui.map.MapFragment"
+        android:label="Карта"/>
+
+    <fragment android:id="@+id/leaderboardFragment"
+        android:name="com.bloodlink.ui.leaderboard.LeaderboardFragment"
+        android:label="Класация"/>
+
+    <fragment android:id="@+id/profileFragment"
+        android:name="com.bloodlink.ui.profile.ProfileFragment"
+        android:label="Профил"/>
+
+    <fragment android:id="@+id/myResponsesFragment"
+        android:name="com.bloodlink.ui.responses.MyResponsesFragment"
+        android:label="Откликнал"/>
+
+
+</navigation>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/bg_primary">
+
+    <!-- Заглавие -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/colorPrimary" android:padding="16dp"
+        android:orientation="vertical">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🏆 Класация на донорите"
+            android:textColor="#FFFFFF" android:textSize="22sp" android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Глобална статистика -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:background="#44000000"
+            android:padding="12dp">
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:id="@+id/tvTotalDonations"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="0" android:textSize="26sp" android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🩸 Дарявания" android:textSize="11sp" android:textColor="#FFCCCC"/>
+            </LinearLayout>
+
+            <View android:layout_width="1dp" android:layout_height="match_parent"
+                android:background="#44FFFFFF" android:layout_marginVertical="4dp"/>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:id="@+id/tvActiveDonors"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="0" android:textSize="26sp" android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="✅ Активни донори" android:textSize="11sp" android:textColor="#FFCCCC"/>
+            </LinearLayout>
+
+            <View android:layout_width="1dp" android:layout_height="match_parent"
+                android:background="#44FFFFFF" android:layout_marginVertical="4dp"/>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <TextView android:id="@+id/tvOpenRequests"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="0" android:textSize="26sp" android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="🚨 Отворени" android:textSize="11sp" android:textColor="#FFCCCC"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Легенда за нива -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="12dp"
+        android:background="#FFF0F0">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="🆕 Нов: 0-2"
+            android:textSize="12sp" android:textColor="#757575" android:gravity="center"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="⭐ Активен: 3-9"
+            android:textSize="12sp" android:textColor="@color/colorPrimary" android:gravity="center"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="🦸 Герой: 10+"
+            android:textSize="12sp" android:textColor="#F9A825" android:gravity="center"/>
+    </LinearLayout>
+
+    <TextView android:id="@+id/tvEmptyLeaderboard"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Все още няма дарявания.\nБъди първият герой! 🩸"
+        android:gravity="center" android:padding="32dp" android:textSize="16sp"
+        android:textColor="@color/text_secondary" android:visibility="gone"/>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout android:id="@+id/leaderboardContainer"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="8dp"/>
+    </ScrollView>
+</LinearLayout>

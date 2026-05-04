@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp" app:cardElevation="2dp"
+    android:layout_marginBottom="8dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="14dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="4dp">
+            <TextView android:id="@+id/tvDonorId"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:textStyle="bold" android:textSize="15sp"/>
+            <TextView android:id="@+id/tvStatus"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="13sp"/>
+        </LinearLayout>
+        <TextView android:id="@+id/tvMessage"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="13sp" android:textColor="#757575" android:textStyle="italic"
+            android:layout_marginBottom="10dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnConfirm"
+                android:layout_width="0dp" android:layout_height="36dp"
+                android:layout_weight="1" android:text="Потвърди"
+                android:backgroundTint="#2E7D32" android:textSize="13sp"
+                android:layout_marginEnd="8dp" android:visibility="gone"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnReject"
+                android:layout_width="0dp" android:layout_height="36dp"
+                android:layout_weight="1" android:text="Откажи"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:textSize="13sp" android:layout_marginEnd="8dp"
+                android:visibility="gone"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnDonated"
+                android:layout_width="0dp" android:layout_height="36dp"
+                android:layout_weight="1" android:text="🩸 Дарил е!"
+                android:backgroundTint="@color/colorPrimary" android:textSize="13sp"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

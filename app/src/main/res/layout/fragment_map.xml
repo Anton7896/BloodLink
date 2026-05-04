@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- Горна лента -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_gravity="top" android:background="#CCB71C1C"
+        android:orientation="horizontal" android:padding="12dp"
+        android:gravity="center_vertical">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="🗺️ Карта на заявките"
+            android:textColor="#FFFFFF" android:textSize="18sp" android:textStyle="bold"/>
+        <TextView android:id="@+id/tvRequestCount"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="#FFD700" android:textSize="13sp"/>
+    </LinearLayout>
+
+    <!-- Бутон центриране -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnCenter"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" android:layout_margin="16dp"
+        android:src="@drawable/ic_search"
+        app:backgroundTint="@color/colorPrimary"
+        app:tint="#FFFFFF"
+        xmlns:app="http://schemas.android.com/apk/res-auto"/>
+
+    <!-- Легенда -->
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start" android:layout_margin="16dp"
+        android:background="#CCB71C1C" android:orientation="vertical" android:padding="10dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="● Критично" android:textColor="#EF9A9A" android:textSize="12sp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="● Спешно" android:textColor="#FFCC80" android:textSize="12sp"
+            android:layout_marginTop="2dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="● Нормално" android:textColor="#FFFFFF" android:textSize="12sp"
+            android:layout_marginTop="2dp"/>
+    </LinearLayout>
+
+    <!-- Съобщение при празно -->
+    <TextView android:id="@+id/tvNoRequests"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#CCB71C1C" android:padding="16dp"
+        android:text="Няма активни заявки с GPS координати"
+        android:textColor="#FFFFFF" android:textSize="15sp"
+        android:visibility="gone"/>
+</FrameLayout>

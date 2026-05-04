@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:background="@color/bg_primary">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:gravity="center" android:padding="32dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🩸" android:textSize="80sp" android:layout_marginBottom="8dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="BloodLink" android:textSize="36sp" android:textStyle="bold"
+            android:textColor="@color/colorPrimary" android:layout_marginBottom="4dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Намери донор. Спаси живот." android:textSize="15sp"
+            android:textColor="@color/text_secondary" android:layout_marginBottom="40dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Имейл адрес"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="16dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Парола"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:passwordToggleEnabled="true" android:layout_marginBottom="24dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <ProgressBar android:id="@+id/progressBar"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:visibility="gone" android:layout_marginBottom="8dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin" android:layout_width="match_parent"
+            android:layout_height="56dp" android:text="Вход" android:textSize="16sp"
+            android:backgroundTint="@color/colorPrimary" android:layout_marginBottom="16dp"/>
+        <TextView android:id="@+id/tvRegisterLink"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Нямате акаунт? Регистрирайте се"
+            android:textColor="@color/colorPrimary" android:textSize="14sp" android:padding="8dp"/>
+    </LinearLayout>
+</ScrollView>

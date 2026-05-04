@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg_primary">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🩸 Публикувай спешна заявка"
+            android:textSize="20sp" android:textStyle="bold"
+            android:textColor="@color/colorPrimary" android:layout_marginBottom="16dp"/>
+
+        <!-- Кръвна група -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Нужна кръвна група *"
+            android:textSize="14sp" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp"/>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:cardElevation="2dp"
+            app:cardCornerRadius="4dp" android:layout_marginBottom="12dp">
+            <Spinner android:id="@+id/spinnerBloodType" android:layout_width="match_parent"
+                android:layout_height="52dp" android:padding="10dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Спешност -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Ниво на спешност *"
+            android:textSize="14sp" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp"/>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:cardElevation="2dp"
+            app:cardCornerRadius="4dp" android:layout_marginBottom="12dp">
+            <Spinner android:id="@+id/spinnerUrgency" android:layout_width="match_parent"
+                android:layout_height="52dp" android:padding="10dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Местоположение -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Местоположение *"
+            android:textSize="14sp" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGetLocation"
+            android:layout_width="wrap_content" android:layout_height="40dp"
+            android:text="📍 Вземи GPS местоположение"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_marginBottom="4dp"/>
+        <TextView android:id="@+id/tvLocationStatus"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="12sp" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Град Spinner -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Град *"
+            android:textSize="14sp" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp"/>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:cardElevation="2dp"
+            app:cardCornerRadius="4dp" android:layout_marginBottom="12dp">
+            <Spinner android:id="@+id/spinnerCity" android:layout_width="match_parent"
+                android:layout_height="52dp" android:padding="10dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Болница Spinner динамично при избор на град -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Болница / Медицинско заведение *"
+            android:textSize="14sp" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp"/>
+        <androidx.cardview.widget.CardView android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:cardElevation="2dp"
+            app:cardCornerRadius="4dp" android:layout_marginBottom="12dp">
+            <Spinner android:id="@+id/spinnerHospital" android:layout_width="match_parent"
+                android:layout_height="52dp" android:padding="10dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Брой единици -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Брой единици кръв (1–5)"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUnits" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="number"
+                android:text="1"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Контактен телефон -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Контактен телефон"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etContactPhone" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="phone"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Пациент -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Пациент (незадължително)"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPatientName" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="textPersonName"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Описание -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Допълнително описание"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="20dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDescription" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="textMultiLine"
+                android:minLines="2" android:gravity="top"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPublish" android:layout_width="match_parent"
+            android:layout_height="56dp" android:text="🚨 Публикувай спешна заявка"
+            android:textSize="16sp" android:backgroundTint="@color/colorPrimary"
+            android:layout_marginBottom="24dp"/>
+
+    </LinearLayout>
+</ScrollView>

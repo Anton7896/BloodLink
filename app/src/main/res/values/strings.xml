@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BloodLink</string>
+    <string name="nav_requests">Заявки</string>
+    <string name="nav_create">Публикувай</string>
+    <string name="nav_ar">AR Компас</string>
+    <string name="nav_responses">Откликнал</string>
+    <string name="nav_profile">Профил</string>
+</resources>

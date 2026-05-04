@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp" app:cardElevation="3dp"
+    android:layout_marginBottom="8dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="14dp"
+        android:gravity="center_vertical">
+
+        <!-- Ранг -->
+        <TextView android:id="@+id/tvRank"
+            android:layout_width="40dp" android:layout_height="wrap_content"
+            android:textSize="22sp" android:gravity="center"
+            android:layout_marginEnd="10dp"/>
+
+        <!-- Кръвна група бадж -->
+        <LinearLayout android:layout_width="42dp" android:layout_height="42dp"
+            android:background="@color/colorPrimary" android:gravity="center"
+            android:layout_marginEnd="10dp">
+            <TextView android:id="@+id/tvBlood"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="12sp" android:textStyle="bold" android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <!-- Имена + ниво + град -->
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical">
+            <TextView android:id="@+id/tvName"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="15sp" android:textStyle="bold" android:textColor="#212121"/>
+            <TextView android:id="@+id/tvLevel"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="12sp" android:layout_marginTop="1dp"/>
+            <TextView android:id="@+id/tvCity"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="11sp" android:textColor="#9E9E9E" android:layout_marginTop="1dp"/>
+        </LinearLayout>
+
+        <!-- Брой дарявания -->
+        <TextView android:id="@+id/tvDonations"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textSize="18sp" android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#C62828</color>
+    <color name="colorPrimaryDark">#B71C1C</color>
+    <color name="colorAccent">#FF5722</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+
+    <color name="bg_primary">#F5F5F5</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="bg_header">#FFF0F0</color>
+
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="critical_red">#B71C1C</color>
+    <color name="high_orange">#E65100</color>
+    <color name="normal_yellow">#F9A825</color>
+
+    <color name="level_gold">#F9A825</color>
+    <color name="level_active">#E53935</color>
+    <color name="level_new">#757575</color>
+</resources>

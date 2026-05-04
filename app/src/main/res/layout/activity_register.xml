@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:background="@color/bg_primary">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🩸 Регистрация на донор"
+            android:textSize="24sp" android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="24dp" android:layout_marginBottom="20dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Собствено име *"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFirstName" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="textPersonName"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Фамилия *"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLastName" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="textPersonName"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Имейл адрес *"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Телефонен номер *"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPhone" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="phone"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Кръвна група Spinner -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Кръвна група *"
+            android:textSize="14sp" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardElevation="2dp" app:cardCornerRadius="4dp"
+            android:layout_marginBottom="10dp">
+            <Spinner android:id="@+id/spinnerBloodType"
+                android:layout_width="match_parent" android:layout_height="52dp"
+                android:padding="10dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Град Spinner -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Град *"
+            android:textSize="14sp" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardElevation="2dp" app:cardCornerRadius="4dp"
+            android:layout_marginBottom="10dp">
+            <Spinner android:id="@+id/spinnerCity"
+                android:layout_width="match_parent" android:layout_height="52dp"
+                android:padding="10dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Парола (мин. 6 символа) *"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:passwordToggleEnabled="true" android:layout_marginBottom="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Потвърди парола *"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:passwordToggleEnabled="true" android:layout_marginBottom="20dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etConfirmPassword" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ProgressBar android:id="@+id/progressBar"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:visibility="gone"
+            android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegister" android:layout_width="match_parent"
+            android:layout_height="56dp" android:text="Регистрирай се като донор"
+            android:textSize="15sp" android:backgroundTint="@color/colorPrimary"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView android:id="@+id/tvLoginLink"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:text="Вече имате акаунт? Влезте"
+            android:textColor="@color/colorPrimary" android:textSize="14sp"
+            android:padding="8dp" android:layout_marginBottom="24dp"/>
+
+    </LinearLayout>
+</ScrollView>
